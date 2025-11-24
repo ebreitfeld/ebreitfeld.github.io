@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ellie Breitfeld</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.7;
+            color: #1a1a1a;
+            background: #ffffff;
+        }
+
+        .container {
+            max-width: 760px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
+
+        header {
+            margin-bottom: 4rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid #e5e5e5;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            letter-spacing: -0.02em;
+        }
+
+        .subtitle {
+            font-size: 1.1rem;
+            color: #666;
+            font-weight: 400;
+        }
+
+        nav {
+            margin: 2rem 0;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+
+        nav a {
+            color: #666;
+            text-decoration: none;
+            font-size: 0.95rem;
+            transition: color 0.2s;
+        }
+
+        nav a:hover {
+            color: #1a1a1a;
+        }
+
+        section {
+            margin-bottom: 4rem;
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            color: #1a1a1a;
+            letter-spacing: -0.01em;
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 140px 1fr;
+            gap: 2.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .profile-img {
+            width: 140px;
+            height: 140px;
+            border-radius: 50%;
+            object-fit: cover;
+            filter: grayscale(20%);
+        }
+
+        p {
+            margin-bottom: 1rem;
+            color: #333;
+        }
+
+        .links {
+            display: flex;
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        .links a {
+            color: #666;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.2s;
+        }
+
+        .links a:hover {
+            color: #1a1a1a;
+        }
+
+        .publication {
+            margin-bottom: 2rem;
+        }
+
+        .publication-title {
+            font-size: 1.05rem;
+            font-weight: 500;
+            color: #1a1a1a;
+            margin-bottom: 0.3rem;
+        }
+
+        .publication-authors {
+            color: #666;
+            font-size: 0.9rem;
+            margin-bottom: 0.2rem;
+        }
+
+        .publication-venue {
+            color: #999;
+            font-size: 0.9rem;
+            font-style: italic;
+            margin-bottom: 0.5rem;
+        }
+
+        .publication-links {
+            display: flex;
+            gap: 1rem;
+            font-size: 0.85rem;
+        }
+
+        .publication-links a {
+            color: #666;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .publication-links a:hover {
+            color: #1a1a1a;
+        }
+
+        .research-list {
+            list-style: none;
+        }
+
+        .research-list li {
+            padding-left: 1.2rem;
+            margin-bottom: 0.6rem;
+            position: relative;
+            color: #333;
+        }
+
+        .research-list li:before {
+            content: "—";
+            position: absolute;
+            left: 0;
+            color: #ccc;
+        }
+
+        .course-section {
+            margin-bottom: 2rem;
+        }
+
+        .course-section h3 {
+            font-size: 1.1rem;
+            font-weight: 500;
+            margin-bottom: 0.8rem;
+            color: #1a1a1a;
+        }
+
+        .course-list {
+            list-style: none;
+        }
+
+        .course-list li {
+            margin-bottom: 0.5rem;
+            color: #333;
+        }
+
+        .contact-grid {
+            display: grid;
+            gap: 0.8rem;
+        }
+
+        .contact-item {
+            color: #333;
+            font-size: 0.95rem;
+        }
+
+        .contact-item strong {
+            color: #666;
+            font-weight: 500;
+            display: inline-block;
+            width: 80px;
+        }
+
+        footer {
+            margin-top: 4rem;
+            padding-top: 2rem;
+            border-top: 1px solid #e5e5e5;
+            color: #999;
+            font-size: 0.85rem;
+            text-align: center;
+        }
+
+        a {
+            color: inherit;
+        }
+
+        @media (max-width: 640px) {
+            .container {
+                padding: 3rem 1.5rem;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            .about-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+
+            .profile-img {
+                width: 120px;
+                height: 120px;
+            }
+
+            nav ul {
+                gap: 1.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Elise (Ellie) Breitfeld</h1>
+            <p class="subtitle">Doctoral Candidate, Psychology</p>
+            <nav>
+                <ul>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#research">Research</a></li>
+                    <li><a href="#publications">Publications</a></li>
+                    <li><a href="#teaching">Teaching</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <section id="about">
+            <div class="about-grid">
+                <img src="Breitfeld_photo.jpg" alt="Profile Photo" class="profile-img">
+                <div>
+                    <p>I am a Doctoral Candidate in the Department of Psychology at the University of Wisconsin-Madison. My research focuses on language development, specifically how babies and toddlers begin to learn words in their native language.</p>
+                    <p>I received my M.S. in Developmental Psychology from the University of Wisconsin-Madison, advised by Dr. Jenny Saffran. Prior to my current position, I recieved my B.A. in Psychology at Princeton University and completed my undergraduate research in Dr. Casey Lew-Williams's lab.</p>
+                    <p>In my research, I am really interested in how children learn language from the complex world around them. I have explored how elements of children's input—the language they hear, the people they hear it from, and the places they hear it in—influence word learning. For example, how does the input children recieve impact which words children learn and what they learn about those words. The goal of this work is to better understand how to best support children's successful word learning and language development. </p>
+                </div>
+            </div>
+            <div class="links">
+                <a href="mailto:breitfeld@wisc.edu">Email</a>
+                <a href="https://scholar.google.com/citations?hl=en&pli=1&user=8jekhTwAAAAJ">Google Scholar</a>
+                <a href="https://github.com/ebreitfeld">GitHub</a>
+                <a href="Breitfeld_CV.pdf">CV</a>
+            </div>
+        </section>
+
+        <section id="research">
+            <h2>Research</h2>
+            <ul class="research-list">
+                <li>Language Development</li>
+                <li>Word Learning</li>
+                <li>Naturalistic Input</li>
+            </ul>
+        </section>
+
+        <section id="publications">
+            <h2>Publications</h2>
+            
+            <div class="publication">
+                <div class="publication-title">Environmental context scaffolds children’s semantic representation of novel words</div>
+                <div class="publication-authors">Elise Breitfeld & Jenny Saffran</div>
+                <div class="publication-venue">Cognition, 2025</div>
+                <div class="publication-links">
+                    <a href="Breitfeld_Cognition2025.pdf">PDF</a>
+                </div>
+            </div>
+
+            <div class="publication">
+                <div class="publication-title">Toddlers’ prior social experience with speakers influences their word learning</div>
+                <div class="publication-authors">Elise Breitfeld, Anna Compton, Jenny Saffran</div>
+                <div class="publication-venue">Infancy, 2024</div>
+                <div class="publication-links">
+                    <a href="Breitfeld_Infancy2024.pdf">PDF</a>
+                </div>
+            </div>
+
+            <div class="publication">
+                <div class="publication-title">Early word learning is influenced by physical environments</div>
+                <div class="publication-authors">Elise Breitfeld & Jenny Saffran</div>
+                <div class="publication-venue">Child Development, 2024</div>
+                <div class="publication-links">
+                    <a href="Breitfeld_ChildDevelopment2024.pdf">PDF</a>
+                </div>
+            </div>
+
+            <div class="publication">
+                <div class="publication-title">Children simultaneously learn multiple dimensions of information during shared book reading</div>
+                <div class="publication-authors">Elise Breitfeld, Christine Potter, Casey Lew-Williams</div>
+                <div class="publication-venue">Journal of Cognition and Development, 2021</div>
+                <div class="publication-links">
+                    <a href="Breitfeld_CognitionDevelopment2021.pdf">PDF</a>
+                </div>
+            </div>
+
+            <p style="margin-top: 2rem; color: #666; font-size: 0.95rem;">See <a href="#" style="text-decoration: underline;">Google Scholar</a> for a complete list.</p>
+        </section>
+
+        <section id="teaching">
+            <h2>Teaching</h2>
+            
+            <div class="course-section">
+                <h3>Current</h3>
+                <ul class="course-list">
+                    <li>PSYCH 601: Psychology of Language</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="contact">
+            <h2>Contact</h2>
+            <div class="contact-grid">
+                <div class="contact-item">
+                    <strong>Email</strong> breitfeld@wisc.edu
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            © 2025 Elise Breitfeld
+        </footer>
+    </div>
+</body>
+</html>
